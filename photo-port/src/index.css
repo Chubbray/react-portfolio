@@ -66,6 +66,7 @@ h6 {
 }
 
 h1 {
+  margin-top: var(--spacing-five);
   font-size: 2.25rem;
 }
 
@@ -105,7 +106,7 @@ a:hover {
 }
 
 header {
-  background: var(--dark);
+  background-image: image-set("../src/assets/cover/header-image.jpg");
 }
 
 header a {
@@ -199,13 +200,13 @@ textarea {
 }
 
 .mx-1 {
-  margin-right: var(--spacing-one);
-  margin-left: var(--spacing-one);
+  margin-right: var(--spacing-five);
+  margin-left: var(--spacing-five);
 }
 
 .mx-2 {
-  margin-right: var(--spacing-two);
-  margin-left: var(--spacing-two);
+  margin-right: var(--spacing-five);
+  margin-left: var(--spacing-five);
 }
 
 .my-1 {

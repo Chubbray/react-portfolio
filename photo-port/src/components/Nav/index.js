@@ -1,19 +1,14 @@
 import React from 'react';
+//import headerImage from "../../assets/cover/header-image.jpg";
+//<img src={headerImage} className="my-2" style={{ width: "100%" }} alt="header" />
 
 function Nav() {
 
     const categories = [
-        {
-            name: "commercial",
-            description:
-                "Photos of grocery stores, food trucks, and other commercial projects",
-        },
-        { name: "portraits", description: "Portraits of people in my life" },
-        { name: "food", description: "Delicious delicacies" },
-        {
-            name: "landscape",
-            description: "Fields, farmhouses, waterfalls, and the beauty of nature",
-        },
+
+        { name: "Portfolio", description: "" },
+        { name: "Resume", description: "" },
+
     ];
 
     function categorySelected(name) {
@@ -22,30 +17,35 @@ function Nav() {
 
     return (
         <header>
-            <h2>
-                <a data-testid="link" href="/">
-                    <span role="img" aria-label="camera"> 📸</span> Oh Snap!
+            <section>
+
+                <h1>
+
+                    <a data-testid="link" href="/">
+                        <span> </span> Kenneth Sorensen
                 </a>
-            </h2>
-            <nav>
-                <ul className="flex-row">
-                    <li className="mx-2">
-                        <a data-testidw="about" href="#about">
-                            About me
+                </h1>
+
+                <nav>
+                    <ul className="flex-row">
+                        <li className="mx-2">
+                            <a data-testidw="about" href="#about">
+                                About me
                         </a>
-                    </li>
-                    <li>
-                        <span>Contact</span>
-                    </li>
-                    {categories.map((category) => (
-                        <li className="mx-1" key={category.name}>
-                            <span onClick={() => categorySelected(category.name)} >
-                                {category.name}
-                            </span>
                         </li>
-                    ))}
-                </ul>
-            </nav>
+                        <li className="mx-1">
+                            <span>Contact</span>
+                        </li>
+                        {categories.map((category) => (
+                            <li className="mx-1" key={category.name}>
+                                <span onClick={() => categorySelected(category.name)} >
+                                    {category.name}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </section>
         </header>
     );
 }
