@@ -5,7 +5,7 @@ import { capitalizeFirstLetter } from "../../utils/helpers";
 //<img src={headerImage} className="my-2" style={{ width: "100%" }} alt="header" />
 
 useEffect(() => {
-    document.title = capitalizeFirstLetter(currentCategory.name);
+    document.title = capitalizeFirstLetter(currentCategory.name)
 },
     [currentCategory]);
 

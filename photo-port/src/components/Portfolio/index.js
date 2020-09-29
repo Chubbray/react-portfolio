@@ -1,14 +1,14 @@
 import React from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
+import Portfolio from '../Portfolio/portfolio';
 
-function myInfo(props) {
-    const currentCategory = {
-        description: "My info here",
-    };
+function myInfo({ currentCategory }) {
+    const { name, description } = currentCategory;
     return (
         <section>
-            <h1>{capitalizeFirstLetter(currentCategory.name)}</h1>
-            <p>{currentCategory.name}</p>
+            <h1 data-testid="h1tag">{capitalizeFirstLetter(name)}</h1>
+            <p>{description}</p>
+            <Portfolio />
         </section>
     );
 }
